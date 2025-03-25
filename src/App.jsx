@@ -74,7 +74,11 @@ const App = () => {
                     className="inline-block"
                     initial={{ y: 150 }}
                     animate={{ y: hoverStates[index].isHovering ? 0 : 150 }}
-                    transition={{ duration: 0.3, delay: (ind + 1) * 0.020 }}
+                    transition={{
+                      duration: 0.4,
+                      ease: [0.83, 0, 0.17, 1],
+                      delay: (ind + 1) * 0.02,
+                    }}
                   >
                     {char}
                   </motion.span>
